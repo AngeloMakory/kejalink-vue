@@ -13,7 +13,7 @@ const go = v => { view.value = v; window.scrollTo(0, 0) }
 
 <template>
   <nav aria-label="Main">
-    <button class="logo" aria-label="Hamahama timeline" @click="go('timeline')"><i></i>Hamahama</button>
+    <button class="logo" aria-label="KEJALINK timeline" @click="go('timeline')"><i></i>KEJALINK</button>
     <button v-for="[id, label] in tabs" :key="id" class="tab"
             :aria-current="view === id ? 'page' : undefined" @click="go(id)">{{ label }}</button>
   </nav>
@@ -22,12 +22,18 @@ const go = v => { view.value = v; window.scrollTo(0, 0) }
 
   <footer>
     <div class="foot-inner">
-      <button class="logo small" aria-label="Hamahama timeline" @click="go('timeline')"><i></i>Hamahama</button>
+      <button class="logo small" aria-label="KEJALINK timeline" @click="go('timeline')"><i></i>KEJALINK</button>
       <div class="foot-links" role="navigation" aria-label="Footer">
         <button v-for="[id, label] in tabs" :key="id" class="tab"
                 :aria-current="view === id ? 'page' : undefined" @click="go(id)">{{ label }}</button>
       </div>
-      <small>&copy; 2026 Hamahama. Made in Nairobi.</small>
+
+      <br><br>
+      <div>
+      <small>&copy; 2026 KEJALINK | MADE IN NAIROBI |
+        <b>
+        POWERED BY <a href="https://astralyngroup.com" style="color: inherit; text-decoration: none;">ASTRALYN</a></b></small>
+      </div>
     </div>
   </footer>
 
